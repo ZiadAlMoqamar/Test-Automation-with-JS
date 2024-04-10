@@ -5,9 +5,9 @@
 
   <testsuite name="tests.contactUsPageTests"
     errors="0" failures="0" hostname="" id="" package="tests" skipped="0"
-    tests="1" time="3.440" timestamp="">
+    tests="1" time="5.797" timestamp="">
   
-    <testcase name="Open contact page successfully" classname="tests.contactUsPageTests" time="0.006000" assertions="0">
+    <testcase name="Open contact page successfully" classname="tests.contactUsPageTests" time="0.004000" assertions="0">
     </testcase>
   
 

@@ -1,5 +1,6 @@
 # Nightwatch Examples Folder
 nightwatch/
+tests_output/screenshots/
 
 # Logs
 logs

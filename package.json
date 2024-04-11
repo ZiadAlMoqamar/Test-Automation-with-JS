@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx nightwatch ./ui-tests/tests  && exit 1"
+    "test": "npx nightwatch ./ui-tests/tests"
   },
   "repository": {
     "type": "git",

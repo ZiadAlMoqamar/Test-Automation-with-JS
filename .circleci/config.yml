@@ -1,7 +1,7 @@
 version: 2.1
 orbs:
   node: circleci/node@4.7
-  browser-tools: circleci/browser-tools@1.4.4
+  browser-tools: circleci/browser-tools@1.4.8
 jobs:
   test:
     docker:
@@ -9,6 +9,9 @@ jobs:
     steps:
       - checkout
       - browser-tools/install-browser-tools
+      - browser-tools/install-chrome:
+          chrome-version: "123.0.6312.122"
+          replace-existing: true
       - node/install-packages
       - run:
           command: npm run test

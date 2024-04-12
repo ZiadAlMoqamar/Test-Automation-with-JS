@@ -17,11 +17,11 @@ describe('Home page tests', () => {
         const searchUrlSnippet = 'search_query=dress&submit_search=';
 
         homePage
-        .enterSearchWord(searchWord)
-        .submitSearch()
-        .assert.urlContains(searchUrlSnippet)
-        .assert.visible('@headingEnteredSearch')
-        .assert.textContains('@headingEnteredSearch', searchWord.toUpperCase());
+            .enterSearchWord(searchWord)
+            .submitSearch()
+            .assert.urlContains(searchUrlSnippet)
+            .assert.visible('@headingEnteredSearch')
+            .assert.textContains('@headingEnteredSearch', searchWord.toUpperCase());
     });
 
     it('Searching with upper case dress should work correctly', (browser) => {
@@ -29,11 +29,21 @@ describe('Home page tests', () => {
         const searchUrlSnippet = 'search_query=DRESS&submit_search=';
 
         homePage
-        .enterSearchWord(searchWord)
-        .submitSearch()
-        .assert.urlContains(searchUrlSnippet)
-        .assert.visible('@headingEnteredSearch')
-        .assert.textContains('@headingEnteredSearch', searchWord.toUpperCase());
+            .enterSearchWord(searchWord)
+            .submitSearch()
+            .assert.urlContains(searchUrlSnippet)
+            .assert.visible('@headingEnteredSearch')
+            .assert.textContains('@headingEnteredSearch', searchWord.toUpperCase());
+    });
+
+    it('Searching with dress should only show dress search results', (browser) => {
+        const searchWord = 'dress';
+
+        homePage
+            .enterSearchWord(searchWord)
+            .submitSearch()
+            .waitForElementVisible('body', 1000)
+            .validatingSearchResults(searchWord);
     });
 
     after((browser) => browser.end());

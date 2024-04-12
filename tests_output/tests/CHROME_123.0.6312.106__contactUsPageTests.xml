@@ -5,47 +5,47 @@
 
   <testsuite name="tests.contactUsPageTests"
     errors="0" failures="0" hostname="" id="" package="tests" skipped="0"
-    tests="8" time="45.80" timestamp="">
+    tests="8" time="46.66" timestamp="">
   
-    <testcase name="Should open contact page successfully via header button" classname="tests.contactUsPageTests" time="3.772" assertions="1">
+    <testcase name="Should open contact page successfully via header button" classname="tests.contactUsPageTests" time="3.605" assertions="1">
 
     
     </testcase>
   
-    <testcase name="Should open contact page successfully via footer link" classname="tests.contactUsPageTests" time="3.117" assertions="1">
+    <testcase name="Should open contact page successfully via footer link" classname="tests.contactUsPageTests" time="3.270" assertions="1">
 
     
     </testcase>
   
-    <testcase name="Submitting message without email should show error alert" classname="tests.contactUsPageTests" time="1.645" assertions="2">
-
-    
-
-    
-    </testcase>
-  
-    <testcase name="Submitting message with invalid email should show error alert" classname="tests.contactUsPageTests" time="2.114" assertions="2">
+    <testcase name="Submitting message without email should show error alert" classname="tests.contactUsPageTests" time="2.067" assertions="2">
 
     
 
     
     </testcase>
   
-    <testcase name="Submitting messsage with blank message field should show error alert" classname="tests.contactUsPageTests" time="1.853" assertions="2">
+    <testcase name="Submitting message with invalid email should show error alert" classname="tests.contactUsPageTests" time="2.185" assertions="2">
 
     
 
     
     </testcase>
   
-    <testcase name="Submitting message without choosing subject should show error alert" classname="tests.contactUsPageTests" time="2.084" assertions="2">
+    <testcase name="Submitting messsage with blank message field should show error alert" classname="tests.contactUsPageTests" time="1.868" assertions="2">
 
     
 
     
     </testcase>
   
-    <testcase name="Submitting message with required fields should show success alert" classname="tests.contactUsPageTests" time="2.352" assertions="4">
+    <testcase name="Submitting message without choosing subject should show error alert" classname="tests.contactUsPageTests" time="2.313" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Submitting message with required fields should show success alert" classname="tests.contactUsPageTests" time="2.281" assertions="4">
 
     
 
@@ -56,7 +56,7 @@
     
     </testcase>
   
-    <testcase name="Submitting message with all fields and attaching file should show success alert" classname="tests.contactUsPageTests" time="2.652" assertions="4">
+    <testcase name="Submitting message with all fields and attaching file should show success alert" classname="tests.contactUsPageTests" time="2.589" assertions="4">
 
     
 

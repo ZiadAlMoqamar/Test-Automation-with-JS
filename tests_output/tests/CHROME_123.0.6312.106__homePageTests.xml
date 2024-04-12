@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites errors="0"
-            failures="0"
-            tests="3">
+            failures="2"
+            tests="4">
 
   <testsuite name="tests.homePageTests"
-    errors="0" failures="0" hostname="" id="" package="tests" skipped="0"
-    tests="3" time="26.15" timestamp="">
+    errors="0" failures="2" hostname="" id="" package="tests" skipped="0"
+    tests="4" time="54.40" timestamp="">
   
-    <testcase name="Should open home page successfully" classname="tests.homePageTests" time="6.514" assertions="1">
+    <testcase name="Should open home page successfully" classname="tests.homePageTests" time="6.160" assertions="1">
 
     
     </testcase>
   
-    <testcase name="Searching with lower case dress should work correctly" classname="tests.homePageTests" time="3.614" assertions="3">
+    <testcase name="Searching with lower case dress should work correctly" classname="tests.homePageTests" time="4.440" assertions="3">
 
     
 
@@ -21,11 +21,30 @@
     
     </testcase>
   
-    <testcase name="Searching with upper case dress should work correctly" classname="tests.homePageTests" time="2.859" assertions="3">
+    <testcase name="Searching with upper case dress should work correctly" classname="tests.homePageTests" time="2.908" assertions="3">
 
     
 
     
+
+    
+    </testcase>
+  
+    <testcase name="Searching with dress should only show dress search results" classname="tests.homePageTests" time="13.57" assertions="8">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+      <failure message="Testing if a value faded short sleeves t-shirt contains dress in 5000ms - expected &#34;contains dress&#34; but got: &#34;faded short sleeves t-shirt&#34; (5070ms)">    at NightwatchAPI.&lt;anonymous&gt; (E:\Code\Automation\Test-Automation-with-JS\ui-tests\page-objects\homePage.js:37:37)</failure>
+
+      <failure message="Testing if a value blouse contains dress in 5000ms - expected &#34;contains dress&#34; but got: &#34;blouse&#34; (5103ms)">    at NightwatchAPI.&lt;anonymous&gt; (E:\Code\Automation\Test-Automation-with-JS\ui-tests\page-objects\homePage.js:37:37)</failure>
 
     
     </testcase>

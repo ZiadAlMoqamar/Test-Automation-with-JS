@@ -17,7 +17,7 @@ module.exports = {
   src_folders: 'ui-tests',
 
   // See https://nightwatchjs.org/guide/concepts/page-object-model.html
-  page_objects_path: ['./ui-tests/page-objects'],
+  page_objects_path: ['./ui-tests/page-objects/'],
 
   // See https://nightwatchjs.org/guide/extending-nightwatch/adding-custom-commands.html
   custom_commands_path: [],

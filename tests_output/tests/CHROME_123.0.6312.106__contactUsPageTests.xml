@@ -1,25 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites errors="0"
             failures="0"
-            tests="3">
+            tests="4">
 
   <testsuite name="tests.contactUsPageTests"
     errors="0" failures="0" hostname="" id="" package="tests" skipped="0"
-    tests="3" time="65.33" timestamp="">
+    tests="4" time="86.21" timestamp="">
   
-    <testcase name="Should open contact page successfully" classname="tests.contactUsPageTests" time="7.117" assertions="1">
+    <testcase name="Should open contact page successfully" classname="tests.contactUsPageTests" time="6.426" assertions="1">
 
     
     </testcase>
   
-    <testcase name="Submitting message without email should show alert" classname="tests.contactUsPageTests" time="12.96" assertions="2">
+    <testcase name="Submitting message without email should show alert" classname="tests.contactUsPageTests" time="12.01" assertions="2">
 
     
 
     
     </testcase>
   
-    <testcase name="Submitting messsage with blank message field should show alert" classname="tests.contactUsPageTests" time="12.59" assertions="2">
+    <testcase name="Submitting message with invalid email should show alert" classname="tests.contactUsPageTests" time="12.53" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Submitting messsage with blank message field should show alert" classname="tests.contactUsPageTests" time="12.13" assertions="2">
 
     
 

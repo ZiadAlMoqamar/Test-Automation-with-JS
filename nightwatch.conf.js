@@ -38,7 +38,9 @@ module.exports = {
   },
 
   test_settings: {
+    end_session_on_fail: false,
     default: {
+      skip_testcases_on_fail: false,
       disable_error_log: false,
       launch_url: 'http://automationpractice.multiformis.com',
 

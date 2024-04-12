@@ -1,4 +1,7 @@
 describe('Contact us page tests', () => {
+    const invalidEmailError = 'Invalid email address.';
+    const message = 'I am Ziad';
+
     let homePage = null;
     let contactUsPage = null;
     beforeEach((browser) => {
@@ -13,14 +16,24 @@ describe('Contact us page tests', () => {
     });
 
     it('Submitting message without email should show alert', (browser) => {
-        const email = 'test@hello.com';
-        const missingEmailError = 'Invalid email address.';
 
         contactUsPage
             .submitMessage()
             .assert.visible('@divErrorAlert')
-            .assert.textContains('@divErrorAlert', missingEmailError)
+            .assert.textContains('@divErrorAlert', invalidEmailError)
             .saveScreenshot('./tests_output/screenshots/missingEmailErrortest.png');
+    });
+
+    it('Submitting message with invalid email should show alert', (browser) => {
+        const invalidEmail = 'test.com';
+
+        contactUsPage
+            .enterEmail(invalidEmail)
+            .enterMessage(message)
+            .submitMessage()
+            .assert.visible('@divErrorAlert')
+            .assert.textContains('@divErrorAlert', invalidEmailError)
+            .saveScreenshot('./tests_output/screenshots/invalidEmailErrortest.png');
     });
 
     it('Submitting messsage with blank message field should show alert', (browser) => {

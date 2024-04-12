@@ -1,4 +1,5 @@
 describe('Contact us page tests', () => {
+    const contactUsPageTitle = 'Contact us - My Store';
     const email = 'test@hello.com';
     const invalidEmailError = 'Invalid email address.';
     const successMessage = 'Your message has been successfully sent to our team.';
@@ -6,24 +7,30 @@ describe('Contact us page tests', () => {
 
     let homePage = null;
     let contactUsPage = null;
-    
+
     before((browser) => {
-        homePage = browser.page.homePage();
-        contactUsPage = homePage.navigate().goToContactUsPage();
+        homePage = browser.page.homePage().navigate();
     });
 
     beforeEach((browser) => {
-        contactUsPage = homePage.goToContactUsPage();
+        contactUsPage = homePage.goToContactUsPageViaHeaderButton();
     });
 
-    it('Should open contact page successfully', (browser) => {
-        const contactUsPageTitle = 'Contact us - My Store';
-
+    it('Should open contact page successfully via header button', (browser) => {
+        contactUsPage = homePage
+            .navigate()
+            .goToContactUsPageViaHeaderButton();
         contactUsPage.assert.titleEquals(contactUsPageTitle);
     });
 
-    it('Submitting message without email should show error alert', (browser) => {
+    it('Should open contact page successfully via footer link', (browser) => {
+        contactUsPage = homePage
+            .navigate()
+            .goToContactUsPageViaFooterLink()
+            .assert.titleEquals(contactUsPageTitle);
+    });
 
+    it('Submitting message without email should show error alert', (browser) => {
         contactUsPage
             .submitMessage()
             .assert.visible('@divErrorAlert')

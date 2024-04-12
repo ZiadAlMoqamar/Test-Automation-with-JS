@@ -1,7 +1,9 @@
 const elements = {
     btnContactUs: '#contact-link',
     linkContactUs: "li[class='item'] a[title='Contact us']",
-
+    inputFieldSearch: '#search_query_top',
+    btnSearch: "button[name='submit_search']",
+    headingEnteredSearch: '.lighter'
 };
 const commands = [
     {
@@ -14,6 +16,16 @@ const commands = [
         goToContactUsPageViaFooterLink() {
             this.click('@linkContactUs');
             return browser.page.contactUsPage();
+        }
+    },
+    {
+        enterSearchWord(word){
+            return this.setValue('@inputFieldSearch', word);
+        }
+    },
+    {
+        submitSearch(){
+            return this.click('@btnSearch');
         }
     }
 ];

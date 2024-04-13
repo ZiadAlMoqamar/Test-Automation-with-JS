@@ -23,6 +23,7 @@ jobs:
           command: |
             npm run dev 3000
             npx wait-on http://localhost:3000
+          when: always
       - run:
           name: API Tests
           command: npm run apitest
@@ -30,8 +31,7 @@ jobs:
       - run:
           name: Stop API Tests Server
           command: pkill -f "npm run dev 3000"
-      - store_test_results:
-          path: /tests_output
+          when: always
 workflows:
   e2e-test:
     jobs:

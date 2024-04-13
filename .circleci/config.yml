@@ -16,6 +16,7 @@ jobs:
       - run:
           name: UI Tests
           command: npm run uitest
+          when: always
       - run:
           name: Start API Tests Server
           background: true
@@ -25,6 +26,7 @@ jobs:
       - run:
           name: API Tests
           command: npm run apitest
+          when: always
       - run:
           name: Stop API Tests Server
           command: pkill -f "npm run dev 3000"

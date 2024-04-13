@@ -2,14 +2,16 @@ const { authenticateUser, createUser, deleteUser, clearAllUsers } = require('../
 
 describe("Authenticating user endpoint", () => {
     it('should respond with a success status code incase of valid email and password', async () => {
+        const email = "ziad1235234@gmail.com";
+        const password = "ziad123";
         const requestBody = {
             "name": "ziad1",
-            "email": "ziad1@gmail.com",
-            "password": "ziad123"
+            "email": email,
+            "password": password
         };
         const authRequestBody = {
-            "email": "ziad1@gmail.com",
-            "password": "ziad123"
+            "email": email,
+            "password": password
         };
 
         await createUser(requestBody);
@@ -18,14 +20,16 @@ describe("Authenticating user endpoint", () => {
     });
 
     it('should respond with a token incase of valid email and password', async () => {
+        const email = "ziad2@gmail.com";
+        const password = "ziad123";
         const requestBody = {
             "name": "ziad2",
-            "email": "ziad2@gmail.com",
-            "password": "ziad123"
+            "email": email,
+            "password": password
         };
         const authRequestBody = {
-            "email": "ziad2@gmail.com",
-            "password": "ziad123"
+            "email": email,
+            "password": password
         };
 
         await createUser(requestBody);
@@ -35,14 +39,16 @@ describe("Authenticating user endpoint", () => {
     });
 
     it('should respond with a valid token incase of valid email and password', async () => {
+        const email = "valid@gmail.com";
+        const password = "ziad123";
         const requestBody = {
             "name": "valid",
-            "email": "valid@gmail.com",
-            "password": "ziad123"
+            "email": email,
+            "password": password
         };
         const authRequestBody = {
-            "email": "valid@gmail.com",
-            "password": "ziad123"
+            "email": email,
+            "password": password
         };
 
         let token = null;
@@ -57,13 +63,14 @@ describe("Authenticating user endpoint", () => {
     });
 
     it('should respond with status code 401 unauthorized incase of correct email and  wrong password', async () => {
+        const email = "correctEmail@gmail.com";
         const requestBody = {
             "name": "wrong pass",
-            "email": "correctEmail@gmail.com",
+            "email": email,
             "password": "ziad123"
         };
         const authRequestBody = {
-            "email": "correctEmail@gmail.com",
+            "email": email,
             "password": "wrong"
         };
 
@@ -73,14 +80,15 @@ describe("Authenticating user endpoint", () => {
     });
 
     it('should respond with status code 401 unauthorized incase of wrong email and  correct password', async () => {
+        const password = "ziad123";
         const requestBody = {
             "name": "wrong email",
             "email": "correctEmail@gmail.com",
-            "password": "ziad123"
+            "password": password
         };
         const authRequestBody = {
             "email": "wrongEmail@gmail.com",
-            "password": "ziad123"
+            "password": password
         };
 
         await createUser(requestBody);
@@ -89,13 +97,14 @@ describe("Authenticating user endpoint", () => {
     });
 
     it('should respond with Incorrect email or password message incase of correct email and  wrong password', async () => {
+        const email = "correctEmail2@gmail.com";
         const requestBody = {
             "name": "wrong p",
-            "email": "correctEmail2@gmail.com",
+            "email": email,
             "password": "ziad123"
         };
         const authRequestBody = {
-            "email": "correctEmail2@gmail.com",
+            "email": email,
             "password": "no"
         };
 
@@ -106,14 +115,15 @@ describe("Authenticating user endpoint", () => {
     });
 
     it('should respond with status code 401 unauthorized incase of empty email', async () => {
+        const password = "ziad123";
         const requestBody = {
             "name": "empty email",
             "email": "emptyemaill@gmail.com",
-            "password": "ziad123"
+            "password": password
         };
         const authRequestBody = {
             "email": "",
-            "password": "ziad123"
+            "password": password
         };
 
         await createUser(requestBody);
@@ -123,13 +133,14 @@ describe("Authenticating user endpoint", () => {
     });
 
     it('should respond with status code 401 unauthorized incase of empty password', async () => {
+        const email = "emptypasssss@gmail.com";
         const requestBody = {
             "name": "empty pass",
-            "email": "emptypasssss@gmail.com",
+            "email": email,
             "password": "ziad123"
         };
         const authRequestBody = {
-            "email": "emptypasssss@gmail.com",
+            "email": email,
             "password": ""
         };
 
@@ -140,14 +151,15 @@ describe("Authenticating user endpoint", () => {
     });
 
     it('should respond with status code 401 unauthorized incase of null email', async () => {
+        const password = "ziad123";
         const requestBody = {
             "name": "null email",
             "email": "nullemail@gmail.com",
-            "password": "ziad123"
+            "password": password
         };
         const authRequestBody = {
             "email": null,
-            "password": "ziad123"
+            "password": password
         };
 
         await createUser(requestBody);
@@ -157,13 +169,14 @@ describe("Authenticating user endpoint", () => {
     });
 
     it('should respond with status code 401 unauthorized incase of null password', async () => {
+        const email = "nullpasssssss@gmail.com";
         const requestBody = {
             "name": "null pass",
-            "email": "nullpasssssss@gmail.com",
+            "email": email,
             "password": "ziad123"
         };
         const authRequestBody = {
-            "email": "nullpasssssss@gmail.com",
+            "email": email,
             "password": null
         };
 

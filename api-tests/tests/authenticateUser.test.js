@@ -53,7 +53,7 @@ describe("Authenticating user endpoint", () => {
         token = response.body.token;
 
         const deleteResponse = await deleteUser(token);
-        expect(deleteResponse.status).toBe(200);
+        expect(deleteResponse.statusCode).toBe(200);
     });
 
     it('should respond with status code 401 unauthorized incase of correct email and  wrong password', async () => {

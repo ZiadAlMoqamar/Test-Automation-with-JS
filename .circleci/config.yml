@@ -30,6 +30,7 @@ jobs:
           when: always
       - run:
           name: Stop API Tests Server
+          background: true
           command: pkill -f "npm run dev 3000"
           when: always
 workflows:

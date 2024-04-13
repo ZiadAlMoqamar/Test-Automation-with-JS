@@ -257,4 +257,73 @@ header {
   font-size: 1rem;
   padding: 0 0.5rem;
 }
-</style></head><body><div class="jesthtml-content"><header><h1 id="title">API Test Report</h1></header><div id="metadata-container"><div id="timestamp">Started: 2024-04-13 10:41:08</div><div id="summary"><div id="suite-summary"><div class="summary-total">Suites (1)</div><div class="summary-passed ">1 passed</div><div class="summary-failed  summary-empty">0 failed</div><div class="summary-pending  summary-empty">0 pending</div></div><div id="test-summary"><div class="summary-total">Tests (1)</div><div class="summary-passed ">1 passed</div><div class="summary-failed  summary-empty">0 failed</div><div class="summary-pending  summary-empty">0 pending</div></div></div></div><div id="suite-1" class="suite-container"><input id="collapsible-0" type="checkbox" class="toggle" checked="checked"/><label for="collapsible-0"><div class="suite-info"><div class="suite-path">E:\Code\Automation\Test-Automation-with-JS\api-tests\tests\api.test.js</div><div class="suite-time">3.191s</div></div></label><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">Creating user endpoint</div><div class="test-title">should respond with a success message</div><div class="test-status">passed</div><div class="test-duration">0.213s</div></div></div></div></div></div></body></html>
+</style></head><body><div class="jesthtml-content"><header><h1 id="title">API Test Report</h1></header><div id="metadata-container"><div id="timestamp">Started: 2024-04-13 18:36:49</div><div id="summary"><div id="suite-summary"><div class="summary-total">Suites (1)</div><div class="summary-passed  summary-empty">0 passed</div><div class="summary-failed ">1 failed</div><div class="summary-pending  summary-empty">0 pending</div></div><div id="test-summary"><div class="summary-total">Tests (18)</div><div class="summary-passed ">4 passed</div><div class="summary-failed ">14 failed</div><div class="summary-pending  summary-empty">0 pending</div></div></div></div><div id="suite-1" class="suite-container"><input id="collapsible-0" type="checkbox" class="toggle" checked="checked"/><label for="collapsible-0"><div class="suite-info"><div class="suite-path">E:\Code\Automation\Test-Automation-with-JS\api-tests\tests\createUser.test.js</div><div class="suite-time">2.261s</div></div></label><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">Creating user endpoint</div><div class="test-title">should respond with a success status code incase of valid input</div><div class="test-status">passed</div><div class="test-duration">0.147s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Creating user endpoint</div><div class="test-title">should respond with a success message incase of valid input</div><div class="test-status">passed</div><div class="test-duration">0.018s</div></div></div><div class="test-result failed"><div class="test-info"><div class="test-suitename">Creating user endpoint</div><div class="test-title">should respond with a token incase of valid input</div><div class="test-status">failed</div><div class="test-duration">0.016s</div></div><div class="failureMessages"> <pre class="failureMsg">Error: expect(received).toBeDefined()
+
+Received: undefined
+    at Object.toBeDefined (E:\Code\Automation\Test-Automation-with-JS\api-tests\tests\createUser.test.js:38:37)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)</pre></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Creating user endpoint</div><div class="test-title">should respond with a success message incase of duplicate name</div><div class="test-status">passed</div><div class="test-duration">0.022s</div></div></div><div class="test-result failed"><div class="test-info"><div class="test-suitename">Creating user endpoint</div><div class="test-title">should respond with status code 409 conflict in case of duplicate email</div><div class="test-status">failed</div><div class="test-duration">0.023s</div></div><div class="failureMessages"> <pre class="failureMsg">Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 409
+Received: 401
+    at Object.toBe (E:\Code\Automation\Test-Automation-with-JS\api-tests\tests\createUser.test.js:73:37)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)</pre></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Creating user endpoint</div><div class="test-title">should respond with already registered message in case of duplicate email</div><div class="test-status">passed</div><div class="test-duration">0.023s</div></div></div><div class="test-result failed"><div class="test-info"><div class="test-suitename">Creating user endpoint</div><div class="test-title">should respond with status code 400 bad request in case of invalid name parameter</div><div class="test-status">failed</div><div class="test-duration">0.012s</div></div><div class="failureMessages"> <pre class="failureMsg">Error: expect(received).toEqual(expected) // deep equality
+
+Expected: 400
+Received: 200
+    at Object.toEqual (E:\Code\Automation\Test-Automation-with-JS\api-tests\tests\createUser.test.js:96:37)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)</pre></div></div><div class="test-result failed"><div class="test-info"><div class="test-suitename">Creating user endpoint</div><div class="test-title">should respond with status code 400 bad request in case of invalid email parameter</div><div class="test-status">failed</div><div class="test-duration">0.01s</div></div><div class="failureMessages"> <pre class="failureMsg">Error: expect(received).toEqual(expected) // deep equality
+
+Expected: 400
+Received: 200
+    at Object.toEqual (E:\Code\Automation\Test-Automation-with-JS\api-tests\tests\createUser.test.js:107:37)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)</pre></div></div><div class="test-result failed"><div class="test-info"><div class="test-suitename">Creating user endpoint</div><div class="test-title">should respond with status code 400 bad request in case of empty request body</div><div class="test-status">failed</div><div class="test-duration">0.009s</div></div><div class="failureMessages"> <pre class="failureMsg">Error: expect(received).toEqual(expected) // deep equality
+
+Expected: 400
+Received: 401
+    at Object.toEqual (E:\Code\Automation\Test-Automation-with-JS\api-tests\tests\createUser.test.js:112:37)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)</pre></div></div><div class="test-result failed"><div class="test-info"><div class="test-suitename">Creating user endpoint</div><div class="test-title">should respond with status code 400 bad request in case of missing name parameter</div><div class="test-status">failed</div><div class="test-duration">0.012s</div></div><div class="failureMessages"> <pre class="failureMsg">Error: expect(received).toEqual(expected) // deep equality
+
+Expected: 400
+Received: 200
+    at Object.toEqual (E:\Code\Automation\Test-Automation-with-JS\api-tests\tests\createUser.test.js:122:37)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)</pre></div></div><div class="test-result failed"><div class="test-info"><div class="test-suitename">Creating user endpoint</div><div class="test-title">should respond with status code 400 bad request in case of missing email parameter</div><div class="test-status">failed</div><div class="test-duration">0.011s</div></div><div class="failureMessages"> <pre class="failureMsg">Error: expect(received).toEqual(expected) // deep equality
+
+Expected: 400
+Received: 401
+    at Object.toEqual (E:\Code\Automation\Test-Automation-with-JS\api-tests\tests\createUser.test.js:132:37)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)</pre></div></div><div class="test-result failed"><div class="test-info"><div class="test-suitename">Creating user endpoint</div><div class="test-title">should respond with status code 400 bad request in case of missing password parameter</div><div class="test-status">failed</div><div class="test-duration">0.011s</div></div><div class="failureMessages"> <pre class="failureMsg">Error: expect(received).toEqual(expected) // deep equality
+
+Expected: 400
+Received: 200
+    at Object.toEqual (E:\Code\Automation\Test-Automation-with-JS\api-tests\tests\createUser.test.js:142:37)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)</pre></div></div><div class="test-result failed"><div class="test-info"><div class="test-suitename">Creating user endpoint</div><div class="test-title">should respond with status code 400 bad request in case of empty name parameter</div><div class="test-status">failed</div><div class="test-duration">0.011s</div></div><div class="failureMessages"> <pre class="failureMsg">Error: expect(received).toEqual(expected) // deep equality
+
+Expected: 400
+Received: 200
+    at Object.toEqual (E:\Code\Automation\Test-Automation-with-JS\api-tests\tests\createUser.test.js:153:37)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)</pre></div></div><div class="test-result failed"><div class="test-info"><div class="test-suitename">Creating user endpoint</div><div class="test-title">should respond with status code 400 bad request in case of empty email parameter</div><div class="test-status">failed</div><div class="test-duration">0.011s</div></div><div class="failureMessages"> <pre class="failureMsg">Error: expect(received).toEqual(expected) // deep equality
+
+Expected: 400
+Received: 200
+    at Object.toEqual (E:\Code\Automation\Test-Automation-with-JS\api-tests\tests\createUser.test.js:164:37)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)</pre></div></div><div class="test-result failed"><div class="test-info"><div class="test-suitename">Creating user endpoint</div><div class="test-title">should respond with status code 400 bad request in case of empty password parameter</div><div class="test-status">failed</div><div class="test-duration">0.011s</div></div><div class="failureMessages"> <pre class="failureMsg">Error: expect(received).toEqual(expected) // deep equality
+
+Expected: 400
+Received: 200
+    at Object.toEqual (E:\Code\Automation\Test-Automation-with-JS\api-tests\tests\createUser.test.js:175:37)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)</pre></div></div><div class="test-result failed"><div class="test-info"><div class="test-suitename">Creating user endpoint</div><div class="test-title">should respond with status code 400 bad request in case of null name parameter</div><div class="test-status">failed</div><div class="test-duration">0.01s</div></div><div class="failureMessages"> <pre class="failureMsg">Error: expect(received).toEqual(expected) // deep equality
+
+Expected: 400
+Received: 200
+    at Object.toEqual (E:\Code\Automation\Test-Automation-with-JS\api-tests\tests\createUser.test.js:186:37)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)</pre></div></div><div class="test-result failed"><div class="test-info"><div class="test-suitename">Creating user endpoint</div><div class="test-title">should respond with status code 400 bad request in case of null email parameter</div><div class="test-status">failed</div><div class="test-duration">0.01s</div></div><div class="failureMessages"> <pre class="failureMsg">Error: expect(received).toEqual(expected) // deep equality
+
+Expected: 400
+Received: 200
+    at Object.toEqual (E:\Code\Automation\Test-Automation-with-JS\api-tests\tests\createUser.test.js:196:37)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)</pre></div></div><div class="test-result failed"><div class="test-info"><div class="test-suitename">Creating user endpoint</div><div class="test-title">should respond with status code 400 bad request in case of null password parameter</div><div class="test-status">failed</div><div class="test-duration">0.011s</div></div><div class="failureMessages"> <pre class="failureMsg">Error: expect(received).toEqual(expected) // deep equality
+
+Expected: 400
+Received: 200
+    at Object.toEqual (E:\Code\Automation\Test-Automation-with-JS\api-tests\tests\createUser.test.js:207:37)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)</pre></div></div></div></div></div></body></html>

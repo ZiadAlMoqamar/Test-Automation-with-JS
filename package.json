@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx nightwatch ./ui-tests/tests"
+    "uitest": "npx nightwatch ./ui-tests/tests",
+    "apitest": "jest",
+    "dev": "nodemon ./node_modules/mock-user-auth/bin/www.js"
   },
   "repository": {
     "type": "git",
@@ -17,7 +19,27 @@
     "url": "https://github.com/ZiadAlMoqamar/Test-Automation-with-JS/issues"
   },
   "homepage": "https://github.com/ZiadAlMoqamar/Test-Automation-with-JS#readme",
+  "jest": {
+    "reporters": [
+      "default",
+      [
+        "./node_modules/jest-html-reporter",
+        {
+          "pageTitle": "API Test Report",
+          "outputPath": "./tests_output/api-test-html-report/api-test-report.html",
+          "includeFailureMsg": true
+        }
+      ]
+    ]
+  },
   "devDependencies": {
-    "nightwatch": "^3.6.0"
+    "jest": "^29.7.0",
+    "jest-html-reporter": "^3.10.2",
+    "nightwatch": "^3.6.0",
+    "supertest": "^6.3.4",
+    "wait-on": "^7.2.0"
+  },
+  "dependencies": {
+    "mock-user-auth": "^1.0.15"
   }
 }

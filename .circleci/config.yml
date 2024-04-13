@@ -14,7 +14,20 @@ jobs:
           replace-existing: true
       - node/install-packages
       - run:
-          command: npm run test
+          name: UI Tests
+          command: npm run uitest
+      - run:
+          name: Start API Tests Server
+          background: true
+          command: |
+            npm run dev 3000
+            npx wait-on http://localhost:3000
+      - run:
+          name: API Tests
+          command: npm run apitest
+      - run:
+          name: Stop API Tests Server
+          command: pkill -f "npm run dev 3000"
       - store_test_results:
           path: /tests_output
 workflows:

@@ -38,7 +38,16 @@ async function deleteUser(token) {
         .set(AUTH_HEADER, token);
     return response;
 }
-async function deleteAllUsers() {
+async function deleteAllUsers(requestBody) {
+    const response = await api
+        .delete(ALL_USERS_ENDPOINT)
+        .send(
+            requestBody
+        );
+    return response;
+}
+
+async function clearAllUsers() {
     const response = await api
         .delete(ALL_USERS_ENDPOINT)
         .send(
@@ -54,4 +63,5 @@ module.exports = {
     patchUser,
     deleteUser,
     deleteAllUsers,
+    clearAllUsers
 };

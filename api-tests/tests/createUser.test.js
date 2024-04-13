@@ -1,5 +1,4 @@
-const requestsBody = require('../resources/requestsBody');
-const { authenticateUser, createUser, deleteAllUsers } = require('../utils/apiUtility');
+const { createUser, clearAllUsers } = require('../utils/apiUtility');
 
 describe("Creating user endpoint", () => {
     it('should respond with a success status code incase of valid input', async () => {
@@ -20,7 +19,7 @@ describe("Creating user endpoint", () => {
             "password": "ziad123"
         };
 
-        const response = await createUser(requestsBody);
+        const response = await createUser(requestBody);
         expect(response.statusCode).toBe(200);
         expect(response.body.message).toEqual("User registered with success");
     });
@@ -197,7 +196,7 @@ describe("Creating user endpoint", () => {
     });
 
     afterAll(async () => {
-        const response = await deleteAllUsers();
+        const response = await clearAllUsers();
         expect(response.statusCode).toBe(200);
     });
 });

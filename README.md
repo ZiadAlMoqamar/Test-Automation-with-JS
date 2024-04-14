@@ -39,7 +39,7 @@ The UI testing framework is structured using the **Page Object Model (POM)**, wh
 - **Test Suites Location**: The test suites for the UI tests are organized in the `ui-tests/tests` directory of the repository.
 - **Test Report**: After running the tests, a detailed HTML report is generated to provide insights into the test results. This report is accessible in the `tests_output/nightwatch-html-report` [directory](https://github.com/ZiadAlMoqamar/Test-Automation-with-JS/tree/main/tests_output/nightwatch-html-report).
 - **Test Cases Documentation**: A PDF file with all the performed test cases can be found [here](https://github.com/ZiadAlMoqamar/Test-Automation-with-JS/blob/main/documents/ui-tests/UI%20test%20cases%20documentation.pdf).
-- **Bug Report**: A detailed bug report for the found issues can be found here [here](https://github.com/ZiadAlMoqamar/Test-Automation-with-JS/blob/main/documents/ui-tests/UI%20bugs%20report.pdf).
+- **Bug Report**: A detailed bug report for the discovered issues can be found here [here](https://github.com/ZiadAlMoqamar/Test-Automation-with-JS/blob/main/documents/ui-tests/UI%20bugs%20report.pdf).
 
 ### API Tests
 
@@ -47,7 +47,7 @@ For API testing, utility methods are abstracted into a separate folder to stream
 
 - **Test Suites Location**: The test suites for the API tests can be found in the `api-tests/tests` directory of the repository.
 - **Test Report**: Jest is configured with an HTML reporter to visualize the test results. The generated report provides a comprehensive overview of the test outcomes and is located in the `tests_output/api-test-html-report` [directory](https://github.com/ZiadAlMoqamar/Test-Automation-with-JS/tree/main/tests_output/api-test-html-report).
-- **Bug Report**: A detailed bug report for the found issues can be found here [here]().
+- **Bug Report**: A detailed bug report for the discovered issues can be found here [here](https://github.com/ZiadAlMoqamar/Test-Automation-with-JS/blob/main/documents/api-tests/API%20bugs%20report.pdf).
 
 ## CircleCI Integration
 

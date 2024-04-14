@@ -79,6 +79,11 @@ describe("Authenticating user endpoint", () => {
         expect(response.statusCode).toBe(401);
     });
 
+    it('should respond with status code 401 unauthorized incase of empty request body object', async () => {
+        const response = await authenticateUser({});
+        expect(response.statusCode).toBe(401);
+    });
+
     it('should respond with status code 401 unauthorized incase of wrong email and  correct password', async () => {
         const password = "ziad123";
         const requestBody = {

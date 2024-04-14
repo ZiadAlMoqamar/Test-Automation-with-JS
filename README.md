@@ -4,7 +4,7 @@
 
 ## Project Overview
 
-This project is dedicated to test some of [online store](http://automationpractice.multiformis.com/index.php)'s functionalities through automated testing. Utilizing **Nightwatch.js**, I performed end-to-end UI tests that simulate real user interactions. Also, I rigorously test the `mock-user-auth` [npm package](https://www.npmjs.com/package/mock-user-auth) with **Jest** and **Supertest** [npm package](https://www.npmjs.com/package/supertest) to validate all possible flows, focusing on the robustness of API endpoints by testing with both valid and invalid body requests and tokens. Integration with **CircleCI** ensures that with each commit to the main branch, our suite of UI and API tests are executed.
+This project is dedicated to testing some of [online store](http://automationpractice.multiformis.com/index.php)'s functionalities through automated testing. Utilizing **Nightwatch.js**, I perform end-to-end UI tests that simulate real user interactions. Also, I rigorously test the `mock-user-auth` [npm package](https://www.npmjs.com/package/mock-user-auth) with **Jest** and **Supertest** [npm package](https://www.npmjs.com/package/supertest) to validate all possible flows, focusing on the robustness of API endpoints by testing with both valid and invalid body requests and tokens. Integration with **CircleCI** ensures that with each commit to the main branch, our suite of UI and API tests are executed.
 
 ## Getting Started
 
@@ -15,7 +15,12 @@ To set up this project for local development:
 - **Install dependencies**: Run `npm install` in the project directory to install all dependencies listed in the `package.json` file.
 - **Jest and Supertest**: These tools are included in the dependencies and are essential for running the unit and API route tests.
 - **Run UI tests**: Execute `npm run uitest` to run UI test suites in parallel.
+  
+  ![ublgIPFZfj](https://github.com/ZiadAlMoqamar/Test-Automation-with-JS/assets/49427996/0d4fee06-798f-4533-9666-b1ca92f39517)
+- **Start the API node locally**: Run `npm run dev` command in your terminal.
 - **Run API tests**: Use `npm run apitest` to run API test suites sequentially.
+  
+  ![yF96vgmOOJ](https://github.com/ZiadAlMoqamar/Test-Automation-with-JS/assets/49427996/2ab4a919-9208-41e8-87ff-7b1d49b67db3)
 
 ## Used Tools & Frameworks
 - Nightwatch JS.

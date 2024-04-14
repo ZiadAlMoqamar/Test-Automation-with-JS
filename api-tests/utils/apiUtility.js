@@ -44,6 +44,13 @@ async function deleteUser(token) {
         .set(AUTH_HEADER, token);
     return response;
 }
+
+async function deleteUserWithoutHeader() {
+    const response = await api
+        .delete(USERS_ENDPOINT);
+    return response;
+}
+
 async function deleteAllUsers(requestBody) {
     const response = await api
         .delete(ALL_USERS_ENDPOINT)
@@ -69,6 +76,7 @@ module.exports = {
     getUserWithoutHeader,
     patchUser,
     deleteUser,
+    deleteUserWithoutHeader,
     deleteAllUsers,
     clearAllUsers
 };

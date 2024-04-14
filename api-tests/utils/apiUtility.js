@@ -24,6 +24,12 @@ async function getUser(token) {
     return response;
 }
 
+async function getUserWithoutHeader(token) {
+    const response = await api
+        .get(USERS_ENDPOINT)
+    return response;
+}
+
 async function patchUser(token, requestBody) {
     const response = await api
         .patch(USERS_ENDPOINT)
@@ -60,6 +66,7 @@ module.exports = {
     createUser,
     authenticateUser,
     getUser,
+    getUserWithoutHeader,
     patchUser,
     deleteUser,
     deleteAllUsers,

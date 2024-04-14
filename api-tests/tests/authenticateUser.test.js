@@ -1,8 +1,8 @@
-const { authenticateUser, createUser, deleteUser, clearAllUsers } = require('../utils/apiUtility');
+const { authenticateUser, createUser, clearAllUsers, getUser } = require('../utils/apiUtility');
 
 describe("Authenticating user endpoint", () => {
     it('should respond with a success status code incase of valid email and password', async () => {
-        const email = "ziad1235234@gmail.com";
+        const email = "ziad132423@gmail.com";
         const password = "ziad123";
         const requestBody = {
             "name": "ziad1",
@@ -58,8 +58,8 @@ describe("Authenticating user endpoint", () => {
         expect(response.body.token).toBeDefined();
         token = response.body.token;
 
-        const deleteResponse = await deleteUser(token);
-        expect(deleteResponse.statusCode).toBe(200);
+        const getResponse = await getUser(token);
+        expect(getResponse.statusCode).toBe(200);
     });
 
     it('should respond with status code 401 unauthorized incase of correct email and  wrong password', async () => {

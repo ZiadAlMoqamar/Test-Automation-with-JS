@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "uitest": "npx nightwatch ./ui-tests/tests",
-    "apitest": "jest",
+    "apitest": "jest -i",
     "dev": "nodemon ./node_modules/mock-user-auth/bin/www.js"
   },
   "repository": {

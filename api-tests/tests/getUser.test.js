@@ -87,122 +87,35 @@ describe("Getting user endpoint", () => {
     });
 
     it('should respond with 403 status code incase of incorrect token', async () => {
-        const email = "incorrectToken@gmail.com";
-        const password = "ziad123";
-        const requestBody = {
-            "name": "zezo",
-            "email": email,
-            "password": password
-        };
-        const authRequestBody = {
-            "email": email,
-            "password": password
-        };
-
-        let token = null;
-        await createUser(requestBody);
-        const response = await authenticateUser(authRequestBody);
-        expect(response.statusCode).toBe(200);
-        expect(response.body.token).toBeDefined();
-        token = "132incorrect";
-
+        const token = "132incorrect";
         const getResponse = await getUser(token);
+
         expect(getResponse.statusCode).toBe(403);
     });
 
     it('should respond with unauthorized message incase of incorrect token', async () => {
-        const email = "incorrectToken2@gmail.com";
-        const password = "ziad123";
-        const requestBody = {
-            "name": "zezo",
-            "email": email,
-            "password": password
-        };
-        const authRequestBody = {
-            "email": email,
-            "password": password
-        };
-
-        let token = null;
-        await createUser(requestBody);
-        const response = await authenticateUser(authRequestBody);
-        expect(response.statusCode).toBe(200);
-        expect(response.body.token).toBeDefined();
-        token = "132incorrect";
-
+        const token = "132incorrect";
         const getResponse = await getUser(token);
+
         expect(getResponse.statusCode).toBe(403);
         expect(getResponse.body.message).toEqual("Unauthorized");
     });
 
     it('should respond with 403 status code incase of empty token', async () => {
-        const email = "emptyToken@gmail.com";
-        const password = "ziad123";
-        const requestBody = {
-            "name": "zezo",
-            "email": email,
-            "password": password
-        };
-        const authRequestBody = {
-            "email": email,
-            "password": password
-        };
-
-        let token = null;
-        await createUser(requestBody);
-        const response = await authenticateUser(authRequestBody);
-        expect(response.statusCode).toBe(200);
-        expect(response.body.token).toBeDefined();
-        token = "";
-
+        const token = "";
         const getResponse = await getUser(token);
+
         expect(getResponse.statusCode).toBe(403);
         expect(getResponse.body.message).toEqual("Unauthorized");
     });
 
     it('should respond with 403 status code incase of null token', async () => {
-        const email = "nullToken@gmail.com";
-        const password = "ziad123";
-        const requestBody = {
-            "name": "zezo",
-            "email": email,
-            "password": password
-        };
-        const authRequestBody = {
-            "email": email,
-            "password": password
-        };
-
-        let token = null;
-        await createUser(requestBody);
-        const response = await authenticateUser(authRequestBody);
-        expect(response.statusCode).toBe(200);
-        expect(response.body.token).toBeDefined();
-
-        const getResponse = await getUser(token);
+        const getResponse = await getUser(null);
         expect(getResponse.statusCode).toBe(403);
         expect(getResponse.body.message).toEqual("Unauthorized");
     });
 
     it('should respond with 403 status code incase of no auth header', async () => {
-        const email = "noToken@gmail.com";
-        const password = "ziad123";
-        const requestBody = {
-            "name": "zezo",
-            "email": email,
-            "password": password
-        };
-        const authRequestBody = {
-            "email": email,
-            "password": password
-        };
-
-        let token = null;
-        await createUser(requestBody);
-        const response = await authenticateUser(authRequestBody);
-        expect(response.statusCode).toBe(200);
-        expect(response.body.token).toBeDefined();
-
         const getResponse = await getUserWithoutHeader();
         expect(getResponse.statusCode).toBe(403);
         expect(getResponse.body.message).toEqual("Unauthorized");

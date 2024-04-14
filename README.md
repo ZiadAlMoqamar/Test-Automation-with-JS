@@ -27,6 +27,7 @@ To set up this project for local development:
 - Jest.
 - Supertest npm package.
 - jest-html-reporter npm package.
+- wait-on npm package.
 - CircleCI.
 
 ## Tests & Results
@@ -36,16 +37,16 @@ To set up this project for local development:
 The UI testing framework is structured using the **Page Object Model (POM)**, which enhances test maintenance and reduces code duplication. Test suites are organized into separate files for clarity and ease of navigation.
 
 - **Test Suites Location**: The test suites for the UI tests are organized in the `ui-tests/tests` directory of the repository.
-- **Test Report**: After running the tests, a detailed HTML report is generated to provide insights into the test results. This report is accessible in the `tests_output/nightwatch-html-report` directory.
-- **Test Cases Documentation**: A PDF file with all the performed test cases can be found [here]().
-- **Bug Report**: A detailed bug report for the found issues can be found here [here]().
+- **Test Report**: After running the tests, a detailed HTML report is generated to provide insights into the test results. This report is accessible in the `tests_output/nightwatch-html-report/index.html` directory.
+- **Test Cases Documentation**: A PDF file with all the performed test cases can be found [here](https://github.com/ZiadAlMoqamar/Test-Automation-with-JS/blob/main/documents/ui-tests/UI%20test%20cases%20documentation.pdf).
+- **Bug Report**: A detailed bug report for the found issues can be found here [here](https://github.com/ZiadAlMoqamar/Test-Automation-with-JS/blob/main/documents/ui-tests/UI%20bugs%20report.pdf).
 
 ### API Tests
 
 For API testing, utility methods are abstracted into a separate folder to streamline the testing process. Each test suite is dedicated to a single functionality, ensuring targeted and efficient testing.
 
 - **Test Suites Location**: The test suites for the API tests can be found in the `api-tests/tests` directory of the repository.
-- **Test Report**: Jest is configured with an HTML reporter to visualize the test results. The generated report provides a comprehensive overview of the test outcomes and is located in the `tests_output/api-test-html-report` directory.
+- **Test Report**: Jest is configured with an HTML reporter to visualize the test results. The generated report provides a comprehensive overview of the test outcomes and is located in the `tests_output/api-test-html-report/api-test-html-report` directory.
 - **Bug Report**: A detailed bug report for the found issues can be found here [here]().
 
 ## CircleCI Integration
@@ -62,6 +63,8 @@ The project is integrated with **CircleCI** to ensure that the test results are 
   - **Cleanup**: After the API tests conclude, the localhost node is terminated.
 
 This integration ensures that every commit to the main branch triggers the automated testing sequence, maintaining the integrity of the codebase.
+
+![JYTJBpc0fC](https://github.com/ZiadAlMoqamar/Test-Automation-with-JS/assets/49427996/4c9a0ebf-8b33-4426-89a7-d680786d564e)
 
 
 
